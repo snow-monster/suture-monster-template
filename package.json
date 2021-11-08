@@ -1,17 +1,32 @@
 {
-  "name": "lyn-ui",
+  "name": "suture-monster-template",
   "version": "0.1.0",
-  "private": true,
+  "title": "Suture Monster Template",
+  "description": "An UI Lib Like Suture Monster, Use For Lazybones",
+  "private": false,
+  "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "dev": "vue-cli-service serve",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "prepublishOnly": "npm run build:lib",
+    "build:lib": "vue-cli-service build --target lib --name suture-monster-template --dest lib src/index.ts"
   },
   "dependencies": {
+    "@types/json-schema": "^7.0.9",
+    "ajv": "^8.6.3",
+    "ant-design-vue": "^2.2.8",
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "vue": "^3.2.21"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
   "devDependencies": {
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
@@ -29,6 +44,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
     "lint-staged": "^9.5.0",
+    "moment": "^2.29.1",
     "prettier": "^2.2.1",
     "typescript": "~4.1.5",
     "vue-jest": "^5.0.0-0"
