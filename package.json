@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "title": "Suture Monster Template",
   "description": "An UI Lib Like Suture Monster, Use For Lazybones",
-  "private": false,
+  "private": true,
   "license": "MIT",
   "scripts": {
     "dev": "vue-cli-service serve",
